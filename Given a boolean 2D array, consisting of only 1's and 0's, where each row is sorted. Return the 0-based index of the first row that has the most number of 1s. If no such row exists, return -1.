@@ -1,0 +1,21 @@
+class Solution {
+  public:
+      int rowWithMax1s(vector<vector<int> > &arr) {
+       int row = arr.size();
+       int col = arr[0].size();
+       int i = 0, j = 0;
+       while(i < row and j < col) {
+           if(arr[i][j] == 1) {
+               return i;
+           }
+           i++;
+         
+           if(i == row) {
+               j++;
+               i=0;
+           }
+           
+       }
+       return -1;
+    }
+};
